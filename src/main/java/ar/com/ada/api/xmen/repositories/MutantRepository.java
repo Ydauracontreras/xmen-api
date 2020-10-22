@@ -7,5 +7,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MutantRepository extends MongoRepository<Mutant, ObjectId> {
+    Mutant findBy_id(ObjectId _id);
+
+    Mutant findByUniqueHash(String hash);
 
 }

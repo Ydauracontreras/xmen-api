@@ -1,15 +1,13 @@
 package ar.com.ada.api.xmen.entities;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Human")
+@Document(collection = "humans")
 public class Human {
-    @Id
     private ObjectId _id;
     private String[] dna;
-    private String name;
+    private String uniqueHash;
 
     /**
      * @return the _id
@@ -40,17 +38,17 @@ public class Human {
     }
 
     /**
-     * @return the name
+     * @return the uniqueHash
      */
-    public String getName() {
-        return name;
+    public String getUniqueHash() {
+        return uniqueHash;
     }
 
     /**
-     * @param name the name to set
+     * @param uniqueHash the uniqueHash to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setUniqueHash(String uniqueHash) {
+        this.uniqueHash = uniqueHash;
     }
 
 }

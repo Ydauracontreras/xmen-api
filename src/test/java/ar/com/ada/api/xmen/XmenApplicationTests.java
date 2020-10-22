@@ -21,16 +21,4 @@ class XmenApplicationTests {
 
 	}
 
-	@Test
-	void ADN_isMutant() {
-		String[] dnaMutant = { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
-		// assertTrue(mutantService.isMutan(dnaMutant));
-	}
-
-	@Test
-	void ADN_isHuman() {
-		String[] dnaHuman = { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
-		// assertTrue(mutantService.isMutan(dnaHuman));
-	}
-
 }

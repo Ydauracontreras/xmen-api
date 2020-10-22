@@ -1,21 +1,19 @@
 package ar.com.ada.api.xmen.entities;
 
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Mutant")
+@Document(collection = "mutants")
 public class Mutant {
-    @Id
     private ObjectId _id;
-    private String[] adn;
-    private String nombre;
+    private String[] dna;
+    private String uniqueHash;
 
     /**
      * @return the _id
      */
-    public ObjectId get_id() {
-        return _id;
+    public String get_id() {
+        return _id.toHexString();
     }
 
     /**
@@ -26,31 +24,31 @@ public class Mutant {
     }
 
     /**
-     * @return the adn
+     * @return the uniqueHash
      */
-    public String[] getAdn() {
-        return adn;
+    public String getUniqueHash() {
+        return uniqueHash;
     }
 
     /**
-     * @param adn the adn to set
+     * @param uniqueHash the uniqueHash to set
      */
-    public void setAdn(String[] adn) {
-        this.adn = adn;
+    public void setUniqueHash(String uniqueHash) {
+        this.uniqueHash = uniqueHash;
     }
 
     /**
-     * @return the nombre
+     * @return the dna
      */
-    public String getNombre() {
-        return nombre;
+    public String[] getDna() {
+        return dna;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param dna the dna to set
      */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDna(String[] dna) {
+        this.dna = dna;
     }
 
 }
